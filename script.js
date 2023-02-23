@@ -49,3 +49,8 @@ function clearCanvas() {
 	ctx.lineCap = 'round';
 }
 
+document.addEventListener('keydown', (e) => {
+	if (e.key === 'b' || e.key === 'B') {
+		clearCanvas();
+	}
+});
