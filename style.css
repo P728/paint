@@ -1,6 +1,6 @@
 @font-face {
    font-family: [Roboto];
-   src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+   src: url('https://fonts.cdnfonts.com/css/arial-2');
 }
 
 body {
@@ -18,7 +18,7 @@ canvas {
 }
 
 p {
-  font-family: 'Roboto';
+  font-family: 'Arial', sans-serif;
   font-weight: bold;
   font-size: 20px;
 }
