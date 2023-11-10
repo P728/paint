@@ -12,13 +12,18 @@ let hue = 0;
 let direction = true;
 
 function draw(e) {
+    e.preventDefault(); // Prevent scrolling on touch devices
 	if (!isDrawing) return;
 	ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
 	ctx.beginPath();
 	ctx.moveTo(lastX, lastY);
-	ctx.lineTo(e.offsetX, e.offsetY);
+    if (e.type === 'touchmove') {
+        ctx.lineTo(e.touches[0].clientX, e.touches[0].clientY);
+    } else {
+        ctx.lineTo(e.offsetX, e.offsetY);
+    }
 	ctx.stroke();
-	[lastX, lastY] = [e.offsetX, e.offsetY];
+	[lastX, lastY] = [e.type === 'touchmove' ? e.touches[0].clientX : e.offsetX, e.type === 'touchmove' ? e.touches[0].clientY : e.offsetY];
 	hue++;
 	if (hue >= 360) {
 		hue = 0;
@@ -38,10 +43,17 @@ canvas.addEventListener('mousedown', (e) => {
 	[lastX, lastY] = [e.offsetX, e.offsetY];
 });
 
+canvas.addEventListener('touchstart', (e) => {
+    isDrawing = true;
+    [lastX, lastY] = [e.touches[0].clientX, e.touches[0].clientY];
+});
+
 canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('touchmove', draw);
 
 canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
+canvas.addEventListener('touchend', () => isDrawing = false);
 
 function clearCanvas() {
 	ctx.fillStyle = 'white';
