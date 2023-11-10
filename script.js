@@ -1,7 +1,10 @@
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
+const clearButton = document.querySelector('#clearButton');
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 10;
@@ -66,3 +69,5 @@ document.addEventListener('keydown', (e) => {
 		clearCanvas();
 	}
 });
+
+clearButton.addEventListener('click', clearCanvas);
