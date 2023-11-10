@@ -1,29 +1,29 @@
 @font-face {
-   font-family: [Arial];
-   src: url('https://fonts.cdnfonts.com/css/arial-2');
+    font-family: [Arial];
+    src: url('https://fonts.cdnfonts.com/css/arial-2');
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-	overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #text {
-  user-select: none;
+    user-select: none;
 }
 
 p {
-  font-family: 'Arial', bold;
-  font-size: 30px;
+    font-family: 'Arial', bold;
+    font-size: 30px;
 }
 
 canvas {
-	display: block;
-	background-color: #fff;
-	width: 100vw;
-	height: 100vh;
+    display: block;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
 }
 
 button {
