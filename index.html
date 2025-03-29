@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Draw On Screen</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Gerador de Ilustrações Line Art</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <center>
-        <p id="text">
-            <!-- O texto será modificado dinamicamente pelo JavaScript -->
-        </p>
-    </center>
-    <canvas id="draw"></canvas>
-    <button id="clearButton">Limpar</button>
-    <script src="script.js"></script>
-</body>
-</html>
+
+    <h1>Gerador de Ilustrações Line Art</h1>
+    <div id="input-container">
+        <input type="text" id="input-text" placeholder="Digite um objeto ou animal...">
+        <button id="generate-btn">Gerar Ilustração</button>
+    </div>
+
+    <div id="loader">
+        <p>Carregando...</p>
+    </div>
+
+    <div id
