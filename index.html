@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
+<html lang="en">
 <head>
+	<title>Draw On Screen</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Ilustrações Line Art</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Draw On Screen</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
-    <h1>Gerador de Ilustrações Line Art</h1>
-    <div id="input-container">
-        <input type="text" id="input-text" placeholder="Digite um objeto ou animal...">
-        <button id="generate-btn">Gerar Ilustração</button>
-    </div>
-
-    <div id="loader">
-        <p>Carregando...</p>
-    </div>
-
-    <div id
+	<center>
+    <p id="text">
+        Para desenhar, clique no botão esquerdo do mouse e arraste pela tela.
+        <br>
+        Pressione o botão abaixo para apagar.
+    </p>
+	</center>
+	<canvas id="draw"></canvas>
+    <center>
+        <p id="text">
+            <!-- O texto será modificado dinamicamente pelo JavaScript -->
+        </p>
+    </center>
+    <canvas id="draw"></canvas>
+    <button id="clearButton">Limpar</button>
+	<script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
